@@ -15,14 +15,22 @@ public class InvokeAny {
         Callable<String> c1 = new Callable<String>() {
             @Override
             public String call() throws Exception {
-                return "Test";
+                int result = 0;
+                for (int i = 0; i < 10; i++) {
+                    result += i;
+                }
+                return ""+result;
             }
         };
 
         Callable<String> c2 = new Callable<String>() {
             @Override
             public String call() throws Exception {
-                return "Ga";
+                int result = 0;
+                for (int i = 0; i < 1000; i++) {
+                    result += i;
+                }
+                return ""+result;
             }
         };
 
